@@ -9,7 +9,7 @@ export default () => (
   <View style={style.App}>
     <Header>
     </Header>
-    <Corpo artigo="o" nome="Vinicius">
+    <Corpo>
     </Corpo>
     <Footer>
     </Footer>
