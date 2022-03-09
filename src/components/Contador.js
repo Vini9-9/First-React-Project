@@ -2,16 +2,16 @@ import React, { useState } from 'react'
 import { Text, Button, StyleSheet } from 'react-native'
 
 
-export default ({ inicial }) => {
+export default ({ inicial = 0, passo = 1}) => {
 
     const [numero, setNumero] = useState(inicial) 
 
     function inc() {
-        setNumero(numero + 1)
+        setNumero(numero + passo)
     }
 
     function dec() {
-        setNumero(numero - 1)
+        setNumero(numero - passo)
     }
 
     return (

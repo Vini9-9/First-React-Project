@@ -8,7 +8,7 @@ import Footer from './components/Footer'
 
 export default () => (
   <View style={style.App}>
-    <Contador inicial={100}>
+    <Contador inicial={100} passo={1}>
     </Contador>
   </View>
 )
