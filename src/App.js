@@ -1,15 +1,15 @@
 import React from "react"
 import { View, StyleSheet } from 'react-native'
 
-import Header from './components/Header'
-import Corpo from './components/Corpo'
 import Contador from './components/Contador'
-import Footer from './components/Footer'
+import Saudacao from './components/Saudacao'
+
+import Sorteio from './components/Sorteio'
 
 export default () => (
   <View style={style.App}>
-    <Contador inicial={100} passo={1}>
-    </Contador>
+    <Saudacao artigo="o" nome="Vinicius"></Saudacao>
+    <Sorteio></Sorteio>
   </View>
 )
 

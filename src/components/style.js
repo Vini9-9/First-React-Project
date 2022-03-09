@@ -1,18 +1,16 @@
 import { StyleSheet } from 'react-native'
 
 export default StyleSheet.create({
-    Titulo: {
-        fontSize: 32
+    txtG:{
+        fontSize: 30
     },
-    Header: {
-
-    }, 
-    Corpo: {
-        justifyContent: 'center',
+    txtM:{
+        fontSize: 20
+    },
+    subtitulo: {
+        fontSize: 20,
+        textAlign: 'center',
         alignItems: 'center'
-    },
-    Footer: {
-
     }
 
 })

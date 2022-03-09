@@ -1,38 +1,47 @@
 import React, { useState } from 'react'
 import { Text, Button, StyleSheet } from 'react-native'
 
+import Estilos from './style'
 
-export default ({ inicial = 0, passo = 1}) => {
 
-    const [numero, setNumero] = useState(inicial) 
+export default (props) => {
+    props.inicial = 0 
+    props.passo = 1
+
+    const [numero, setNumero] = useState(props.inicial) 
 
     function inc() {
-        setNumero(numero + passo)
+        setNumero(numero + props.passo)
+        return numero + props.passo
     }
 
     function dec() {
-        setNumero(numero - passo)
+        setNumero(numero - props.passo)
+        return numero - props.passo
     }
 
     return (
         <>
-            <Text style={style.txtG}>
-                {numero}
+            <Text style={Estilos.txtM}>
+                {props.titulo}
             </Text>
             <Button
                 title="+"
-                onPress={inc}
+                onPress={() => {
+                    const n = inc()
+                    props.funcao(n)
+                }}
             /> 
+            <Text style={Estilos.txtG}>
+                {numero}
+            </Text>
             <Button
                 title="-"
-                onPress={dec}
+                onPress={() => {
+                    const n = dec()
+                    props.funcao(n)
+                }}
             /> 
         </>
     )
 }
-
-const style = StyleSheet.create({
-    txtG:{
-        fontSize: 30
-    }
-})

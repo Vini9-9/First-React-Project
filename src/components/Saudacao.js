@@ -1,11 +1,11 @@
 import React from "react"
 import { View, Text } from 'react-native'
 
-import Estilo from './style'
+import Estilos from './style'
 
 export default (props) => (
     <View>
-        <Text style={Estilo.Corpo}>
+        <Text style={Estilos.txtG}>
             Bem vind{props.artigo} {props.nome} :)
         </Text>
     </View>
