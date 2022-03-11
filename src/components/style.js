@@ -11,6 +11,10 @@ export default StyleSheet.create({
         fontSize: 20,
         textAlign: 'center',
         alignItems: 'center'
+    },
+    numero: {
+        fontSize: 30,
+        padding: 20
     }
 
 })

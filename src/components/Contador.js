@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Text, Button, StyleSheet } from 'react-native'
+import { Text, Button, StyleSheet, View } from 'react-native'
 
 import Estilos from './style'
 
@@ -25,23 +25,35 @@ export default (props) => {
             <Text style={Estilos.txtM}>
                 {props.titulo}
             </Text>
-            <Button
-                title="+"
-                onPress={() => {
-                    const n = inc()
-                    props.funcao(n)
-                }}
-            /> 
-            <Text style={Estilos.txtG}>
-                {numero}
-            </Text>
-            <Button
-                title="-"
-                onPress={() => {
-                    const n = dec()
-                    props.funcao(n)
-                }}
-            /> 
+
+            <View style={style.Contador}>
+                <Button
+                    title="+"
+                    onPress={() => {
+                        const n = inc()
+                        props.funcao(n)
+                    }}
+                /> 
+                <Text style={Estilos.numero}>
+                    {numero}
+                </Text>
+                <Button style={style.BotaoNumero}
+                    title="-"
+                    onPress={() => {
+                        const n = dec()
+                        props.funcao(n)
+                    }}
+                /> 
+            </View>
         </>
     )
 }
+
+const style = StyleSheet.create({
+    Contador: {
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+
+})

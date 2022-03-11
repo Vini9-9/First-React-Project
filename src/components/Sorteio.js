@@ -22,7 +22,7 @@ export default props => {
                 max={100}
                 funcao={exibirNumero}
                 ></ControlesSorteio>
-            <Text>O número aleatório é: {numAleatorio}</Text>
+            <Text style={Estilo.txtG}>O número aleatório é: {numAleatorio}</Text>
         </>
         
     )

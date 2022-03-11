@@ -1,5 +1,5 @@
 import React, { useState } from 'react' 
-import { Text, Button } from 'react-native' 
+import { View, Button, StyleSheet } from 'react-native' 
 import Estilo from './style' 
 
 import Contador from './Contador'
@@ -25,7 +25,7 @@ export default props => {
 
     return (
         <>
-            <Contador
+            <Contador 
                 titulo="Max" inicial={props.max}
                 passo={1} funcao={exibirMax}>
             </Contador>
@@ -33,14 +33,22 @@ export default props => {
                 titulo="Min" inicial={props.min}
                 passo={1} funcao={exibirMin}>
             </Contador>
-            <Button
-                title="Sortear"
-                onPress={() => {
-                    const n = gerarNumeros(numMin ,numMax)
-                    props.funcao(n)
-                }}
-            />
+            <View style={style.Botao}>
+                <Button 
+                    title="Sortear"
+                    onPress={() => {
+                        const n = gerarNumeros(numMin ,numMax)
+                        props.funcao(n)
+                    }}
+                />
+            </View>
         </>
 
     )
 }
+
+const style = StyleSheet.create({
+    Botao: {
+        paddingTop: 10
+    }
+})
