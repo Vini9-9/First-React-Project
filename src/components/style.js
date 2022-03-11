@@ -15,6 +15,20 @@ export default StyleSheet.create({
     numero: {
         fontSize: 30,
         padding: 20
+    },
+    saudacao: {
+        margin: 0,
+        textAlign: 'center',
+        alignItems: 'center'
+    },
+    viewInput: {
+        flexDirection: 'row',
+        width: '80%',
+        justifyContent: 'space-evenly',
+        margin: 10
+    },
+    txtInput: {
+        borderBottomWidth: 1,
     }
 
 })
