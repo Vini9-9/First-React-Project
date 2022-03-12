@@ -45,6 +45,9 @@ export default class Saudacao extends Component {
                     onChangeText={this.atualizaNome}
                 />
             </View>
+            <Text style={Estilos.txtG}>
+                Este é o projeto {this.props.nomeProjeto}
+            </Text>
         </View>
         )}
 
