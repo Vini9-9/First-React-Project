@@ -3,12 +3,15 @@ import { View, StyleSheet } from 'react-native'
 
 import Saudacao from './components/Saudacao'
 
-import Sorteio from './components/Sorteio'
+import Tabuada from './components/Tabuada'
 
 export default () => (
   <View style={style.App}>
-    <Saudacao artigo="o" nomeUsuario="Visitante"></Saudacao>
-    <Sorteio></Sorteio>
+    <Saudacao
+     artigo="o" nomeUsuario="Visitante"
+     nomeProjeto="Divisiveis"
+     />
+    <Tabuada />
   </View>
 )
 
